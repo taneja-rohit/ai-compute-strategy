@@ -47,6 +47,7 @@
             margin-bottom: 32px;
             padding: 4px;
             border: 1px solid #404040;
+            flex-wrap: wrap;
         }
         
         .tab {
@@ -60,6 +61,7 @@
             transition: all 0.2s ease;
             font-size: 13px;
             font-weight: 500;
+            min-width: 120px;
         }
         
         .tab:hover {
@@ -313,6 +315,260 @@
             border-radius: 8px;
             margin: 16px 0;
             font-weight: 600;
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+                border-radius: 12px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+                line-height: 1.2;
+            }
+            
+            .subtitle {
+                font-size: 0.9em;
+                margin-bottom: 30px;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                gap: 4px;
+            }
+            
+            .tab {
+                flex: none;
+                min-width: auto;
+                padding: 14px 16px;
+                font-size: 14px;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .card h3 {
+                font-size: 1.2em;
+            }
+            
+            .chart-container {
+                height: 250px;
+            }
+            
+            .table {
+                font-size: 12px;
+            }
+            
+            .table th,
+            .table td {
+                padding: 8px 12px;
+                font-size: 11px;
+            }
+            
+            .metric-card {
+                padding: 16px;
+            }
+            
+            .metric-value {
+                font-size: 1.8em;
+            }
+            
+            .metric-label {
+                font-size: 0.8em;
+            }
+            
+            .pattern-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .pattern-card {
+                padding: 14px;
+            }
+            
+            .implementation-timeline {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .timeline-item {
+                padding: 14px;
+            }
+            
+            .competitive-matrix {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+            
+            .matrix-header,
+            .matrix-cell,
+            .matrix-row-header {
+                padding: 10px 8px;
+                font-size: 10px;
+            }
+            
+            .architecture-section {
+                padding: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
+            
+            .container {
+                padding: 16px;
+                border-radius: 8px;
+            }
+            
+            h1 {
+                font-size: 1.6em;
+            }
+            
+            .subtitle {
+                font-size: 0.85em;
+                margin-bottom: 25px;
+            }
+            
+            .tab {
+                padding: 12px 14px;
+                font-size: 13px;
+            }
+            
+            .card {
+                padding: 16px;
+            }
+            
+            .card h3 {
+                font-size: 1.1em;
+            }
+            
+            .chart-container {
+                height: 200px;
+            }
+            
+            .table th,
+            .table td {
+                padding: 6px 8px;
+                font-size: 10px;
+            }
+            
+            .metric-card {
+                padding: 14px;
+            }
+            
+            .metric-value {
+                font-size: 1.6em;
+            }
+            
+            .pattern-card {
+                padding: 12px;
+            }
+            
+            .timeline-item {
+                padding: 12px;
+            }
+            
+            .efficiency-highlight {
+                padding: 14px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Tablet Responsive Design */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: 28px;
+            }
+            
+            .grid {
+                gap: 20px;
+            }
+            
+            .grid-3 {
+                gap: 18px;
+            }
+            
+            .card {
+                padding: 22px;
+            }
+            
+            .chart-container {
+                height: 280px;
+            }
+            
+            .pattern-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        /* Large Screen Optimizations */
+        @media (min-width: 1200px) {
+            .container {
+                padding: 40px;
+            }
+            
+            .grid {
+                gap: 32px;
+            }
+            
+            .grid-3 {
+                gap: 24px;
+            }
+            
+            .card {
+                padding: 28px;
+            }
+            
+            .chart-container {
+                height: 360px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .container {
+                background: white;
+                border: 1px solid #ccc;
+                box-shadow: none;
+            }
+            
+            .tabs {
+                display: none;
+            }
+            
+            .tab-content {
+                display: block !important;
+            }
+            
+            .card {
+                background: white;
+                border: 1px solid #ddd;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
@@ -1029,8 +1285,4 @@
         }
     </script>
 </body>
-</html> color: '#888', font: { size: 10 } }
-                    },
-                    x: {
-                        grid: { color: '#333' },
-                        ticks: {
+</html>
